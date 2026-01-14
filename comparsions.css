@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url(variables.css);
+@import url(herosection.css);
+
+.comparsions {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  flex-direction: row;
+  height: 50dvh;
+  width: 80%;
+  font-family: Inter;
+  gap: 1rem;
+}
+.comparison {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.comparison ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem;
+}
+.page-speed-image{
+    width: 300px;
+    height: 300px;
+}
+.page-speed-image > img{
+    width: 100%;
+    height: 100%;
+}

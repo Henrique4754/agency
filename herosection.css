@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url(variables.css);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  scroll-behavior: smooth;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100%;
+  font-family: Inter;
+  gap: 1rem;
+}
+.hero-section {
+  background-color: #0f172a;
+  background-image: radial-gradient(
+      at 0% 0%,
+      rgba(0, 209, 255, 0.15) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 100% 0%, rgba(112, 0, 255, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(37, 99, 235, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(30, 27, 75, 0.2) 0px, transparent 50%);
+}
+.hero-section > h1 {
+  font-weight: 700;
+  color: var(--texto-principal);
+}
+.hero-section > h2 {
+  font-weight: 300;
+  color: var(--texto-principal);
+}
+.hero-section > p {
+  font-weight: 300;
+  color: var(--texto-principal);
+}
+.hero-section > a {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--texto-principal);
+  background: linear-gradient(90deg, #00d1ff, #7000ff);
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 20px rgba(0, 209, 255, 0.3);
+}
+
+.hero-section > a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 25px rgba(0, 209, 255, 0.5);
+}
