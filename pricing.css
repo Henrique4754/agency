@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url(variables.css);
-@import url(herosection.css);
+@import url(telasMenores.css);
 .pricing-section{
     display: flex;
     flex-direction: column;

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url(variables.css);
-
+@import url(telasMenores.css);
 
 .comparisons-section {
   display: flex;
@@ -21,17 +21,12 @@
   overflow: hidden;
   z-index: -1; 
 }
-.comparison > h3 {
-  color: var(--texto-principal);
-  font-size: 1.5rem;
-  font-weight: 500;
+.comparisons-section > h1{
   font-family: "Inter", sans-serif;
-}
-.comparison > p {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 200;
   color: var(--texto-principal);
-  font-size: 1.1rem;
-  font-weight: 300;
-  font-family: "Inter", sans-serif;
 }
 .comparison-card-container {
   display: flex;
@@ -40,8 +35,7 @@
   text-align: center;
   flex-direction: row;
   font-family: Inter;
-  gap: 1rem;
-  margin: 2rem;
+  gap: 1rem;;
 }
 .comparison {
   display: flex;
@@ -51,21 +45,33 @@
   width: 350px;
   height: 500px;
   gap: 1rem;
-  border: 2px solid black;
-  padding: 1rem;
   border-radius: 10px;
   
-  background: rgba(0, 209, 255, 0.25);
+  /* Fundo de vidro */
+  background: rgba(60, 60, 60, 0.5);
   box-shadow: 0 8px 32px 0 rgba(14, 15, 18, 0.6);
-  backdrop-filter: blur(.05px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(5px);
 }
 .page-speed-image {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 100%
 }
 .page-speed-image > img {
   width: 100%;
   height: 100%;
+  border-radius: 10px 10px 0px 0px;
 }
+.comparison-description > h4 {
+  color: var(--texto-principal);
+  font-size: 1.3rem;
+  font-weight: 230;
+  font-family: "Inter", sans-serif;
+}
+.comparison-description > p {
+  color: var(--texto-principal);
+  font-size: 1.1rem;
+  padding: 1rem;
+  font-weight: 130;
+  font-family: "Inter", sans-serif;
+}
+/* Media queries para telas menores */
