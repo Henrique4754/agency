@@ -74,4 +74,33 @@
   font-weight: 130;
   font-family: "Inter", sans-serif;
 }
-/* Media queries para telas menores */
+
+
+@media (max-width: 768px) {
+  .comparisons-section {
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .comparison-card-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .comparison {
+    width: 90%;
+    height: auto;
+  }
+  
+  .page-speed-image {
+    width: 100%;
+  }
+  
+  .comparison-description > h4 {
+    font-size: 1.5rem;
+  }
+  
+  .comparison-description > p {
+    font-size: 1rem;
+  }
+}
