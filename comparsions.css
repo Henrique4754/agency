@@ -10,105 +10,138 @@
   height: 100vh;
   justify-content: center;
   gap: 2rem;
-  background: linear-gradient(0deg,rgba(42, 123, 155, 1) 0%, rgba(255, 255, 255, 0) 0%, rgb(0, 44, 76) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(255, 255, 255, 0) 0%,
+    rgb(0, 44, 76) 100%
+  );
 }
-.comparisons-section #comparison-sect-bg {
+#comparison-sect-bg {
   position: absolute;
   top: 100;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: -1; 
+  z-index: -1;
 }
-.comparisons-section > h1{
+.comparisons-section > h2 {
   font-family: "Inter", sans-serif;
+  font-weight: 100;
   text-transform: uppercase;
   font-size: 2.5rem;
-  font-weight: 200;
   color: var(--texto-principal);
-}
-.comparison-card-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   text-align: center;
-  flex-direction: row;
-  font-family: Inter;
-  gap: 1rem;;
 }
-.comparison {
+.comparison-cards-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+  .comparison-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--texto-principal);
+  background-color: #091f42;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  border: 2px solid #4facfe;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 450px;
+}
+.comparison-card > img {
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.slide-container-for-mobile{
+  display: none;
+}
+
+.comparison-card > p{
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: var(--texto-principal);
+  text-align: center;
+}
+.comparison-card > h3{
+  color: var(--texto-principal);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+@media screen and (max-width: 768px) {
+  .comparison-cards-container {
+    display: none;
+  }
+  .container-images{
+  position: relative;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  width: 350px;
-  height: 500px;
-  gap: 1rem;
+  width: 400px;
+}
+.slider{
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  transition: opacity 2s;
   border-radius: 10px;
-  
-  /* Fundo de vidro */
-  background: rgba(60, 60, 60, 0.5);
-  box-shadow: 0 8px 32px 0 rgba(14, 15, 18, 0.6);
-  backdrop-filter: blur(5px);
 }
-.page-speed-image {
-  width: 350px;
-  height: 100%
+.on{
+  opacity: 1;
 }
-.page-speed-image > img {
+#prev-button, #next-button{
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+#prev-button{
+  transform: rotate(180deg);
+}
+#prev-button img, #next-button img{
   width: 100%;
   height: 100%;
-  border-radius: 10px 10px 0px 0px;
 }
-.comparison-description > h4 {
-  color: var(--texto-principal);
-  font-size: 1.3rem;
-  font-weight: 230;
+.slide-container-for-mobile{
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1rem;
+}
+  .comparison-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #091f42;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+  border: 2px solid #4facfe;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 450px;
+}
+.comparison-card > p{
   font-family: "Inter", sans-serif;
-}
-.comparison-description > p {
+  font-weight: 200;
+  padding: 0.5rem;
+  font-size: 1rem;
   color: var(--texto-principal);
-  font-size: 1.1rem;
-  padding: 1rem;
-  font-weight: 130;
-  font-family: "Inter", sans-serif;
+  text-align: center;
 }
-
-
-@media (max-width: 768px) {
-  .comparisons-section {
-    height: 100dvh;
-    padding: 0 1rem 0 1rem;
-    width: 100%;
-  }
-  
-  .comparison-card-container {
-    overflow-x: scroll;
-    flex-direction: row;
-    width: 100%;
-    gap : 2rem;
-  }
-  
-  .comparison {
-    width: 100%;
-    padding: 10px;
-     box-shadow: 0 0px 0px 0 rgba(14, 15, 18, 0.6);
-  }
-  
-  .page-speed-image {
-     width: 350px;
-     height: 300px;
-  }
-  .page-speed-image > img{
-    width: 100%;
-  }
-  
-  .comparison-description > h4 {
-    font-size: 1.5rem;
-  }
-  
-  .comparison-description > p {
-    font-size: 1rem;
-  }
+.comparison-card > h3{
+  color: var(--texto-principal);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
 }
