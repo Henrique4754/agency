@@ -30,6 +30,6 @@ function prevSlider(){
     }
     showSlider()
 }
-
+showSlider()
 btnNext.addEventListener('click', nextSlider)
 btnPrev.addEventListener('click', prevSlider)
