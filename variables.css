@@ -1,5 +1,5 @@
 :root {
-    --texto-principal: #F8FAFC;
+  --texto-principal: #f8fafc;
 }
 * {
   box-sizing: border-box;
@@ -7,11 +7,11 @@
   margin: 0;
   font-family: "Inter", sans-serif;
 }
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #0F172A;
-    scroll-behavior: smooth;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2a2a2a;
+  scroll-behavior: smooth;
 }
