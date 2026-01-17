@@ -24,6 +24,10 @@
   left: 0;
   background: linear-gradient(180deg, rgba(42, 123, 155, 0) 0%, #00a3c8 100%);
   z-index: -1;
+  /* From https://css.glass */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
 }
 #mockup-image1 {
   animation: shakeY; /* referring directly to the animation's @keyframe declaration */
@@ -101,6 +105,10 @@
     left: 0;
     background: linear-gradient(180deg, rgba(42, 123, 155, 0) 0%, #00a3c8 100%);
     z-index: -1;
+    /* From https://css.glass */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
   }
   .hero-sect-text-container > h1 {
     font-weight: 600;
