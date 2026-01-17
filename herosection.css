@@ -7,14 +7,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
   height: 100dvh;
   width: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(42, 123, 155, 1) 0%,
-    rgba(255, 255, 255, 0) 0%,
-    #00a3c8 100%
-  );
+  background:
+    linear-gradient(180deg, rgba(42, 123, 155, 0) 0%, #00a3c8 100%), url("images/mesh-757.png");
+  background-size: cover; /* Garante que a imagem preencha tudo */
+  background-position: center; /* Mantém o centro da imagem sempre no meio */
 }
 .hero-section #hero-sect-bg {
   position: absolute;
@@ -98,36 +98,33 @@
 }
 @media screen and (max-width: 768px) {
   #mockup-image1 {
-  animation: shakeY; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  position: absolute;
-  right: -50%;
-  bottom: -20%;
-  height: 70%;
-  z-index: -1;
-}
-#mockup-image2 {
-  animation: shakeY; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 24s;
-  animation-iteration-count: infinite;
-  position: absolute;
-  right: 30%;
-  bottom: 40%;
-  height: 40%;
-  z-index: -1;
-}
-#mockup-image3 {
-  animation: shakeY; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 28s;
-  animation-iteration-count: infinite;
-  position: absolute;
-  right: -10%;
-  bottom: 70%;
-  height: 30%;
-  z-index: -1;
-}
-
-
-
+    animation: shakeY; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    right: -50%;
+    bottom: -20%;
+    height: 70%;
+    z-index: -1;
+  }
+  #mockup-image2 {
+    animation: shakeY; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 24s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    right: 30%;
+    bottom: 40%;
+    height: 40%;
+    z-index: -1;
+  }
+  #mockup-image3 {
+    animation: shakeY; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 28s;
+    animation-iteration-count: infinite;
+    position: absolute;
+    right: -10%;
+    bottom: 70%;
+    height: 30%;
+    z-index: -1;
+  }
 }
