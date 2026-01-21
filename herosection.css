@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url(variables.css);
-@import url(telasMenores.css);
 @import url(node_modules/animate.css/animate.css);
 nav {
   position: fixed;
@@ -21,6 +20,7 @@ nav {
   height: 3.5rem;
   margin: 0.5rem 1rem;
   align-items: center;
+  border-radius: 1rem;
 }
 .nav-links {
   display: flex;
@@ -38,85 +38,73 @@ nav {
 }
 .hero-section {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   position: relative;
-  overflow: hidden;
   height: 100dvh;
   width: 100%;
-  background: url("images/mesh-757.png");
+  background:
+    linear-gradient(180deg, rgba(42, 123, 155, 0) 0%, #00a3c8 100%),
+    url("images/mesh-757.png");
   background-size: cover; /* Garante que a imagem preencha tudo */
   background-position: center; /* Mantém o centro da imagem sempre no meio */
-  z-index: 2;
 }
-.filter {
-  width: 100%;
+.content-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+#mockup-hero-mobile{
+  display: none;
+}
+#mockup-hero-desk {
+  width: 70rem;
+  height: 70rem;
+  position: relative;
+  overflow: hidden;
+}
+#mockup-hero-desk > img {
   height: 100%;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(180deg, rgba(42, 123, 155, 0) 0%, #00a3c8 100%);
-  z-index: -1;
-  /* From https://css.glass */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1.5px);
-  -webkit-backdrop-filter: blur(1.5px);
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
 }
-#mockup-image1 {
-  animation: shakeY; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
-  position: absolute;
-  right: 20%;
-  bottom: -20%;
-  height: 60%;
-  z-index: -2;
+#mockup-hero-desk img.ativo {
+  animation: zoomIn;
+  animation-duration: 2s;
+  opacity: 1;
+  z-index: 1;
 }
-#mockup-image2 {
-  animation: shakeY; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 24s;
-  animation-iteration-count: infinite;
-  position: absolute;
-  right: 58%;
-  bottom: 20%;
-  height: 80%;
-  z-index: -2;
-}
-#mockup-image3 {
-  animation: shakeY; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 28s;
-  animation-iteration-count: infinite;
-  position: absolute;
-  right: -10%;
-  bottom: 37%;
-  height: 90%;
-  z-index: -2;
-}
-.content-container {
+.hero-sect-text-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  width: 100%;
-  padding: 0rem;
-}
-.hero-sect-text-container {
   width: 90%;
   text-shadow: black 1px 1px 6px;
+  text-align: right;
 }
 .hero-sect-text-container > h1 {
   font-weight: 700;
   color: var(--texto-principal);
-  text-align: center;
+  margin-bottom: 1rem;
 }
 .hero-sect-text-container > h2 {
   font-weight: 300;
   color: var(--texto-principal);
-  text-align: center;
+  margin-bottom: 1rem;
 }
-.content-container > a {
+.hero-sect-text-container > a {
+  align-self: flex-end;
   padding: 1rem;
+  margin-bottom: 1rem;
   text-decoration: none;
   color: var(--texto-principal);
   background: #001959;
@@ -125,24 +113,11 @@ nav {
   box-shadow: 0px 0px 20px rgba(0, 209, 255, 0.3);
 }
 
-.content-container > a:hover {
+.hero-sect-text-container > a:hover {
   transform: translateY(-3px);
   box-shadow: 0px 10px 25px rgba(0, 209, 255, 0.5);
 }
 @media screen and (max-width: 768px) {
-  .filter {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(180deg, rgba(42, 123, 155, 0) 0%, #00a3c8 100%);
-    z-index: -1;
-    /* From https://css.glass */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1.5px);
-    -webkit-backdrop-filter: blur(1.5px);
-  }
   .hero-sect-text-container > h1 {
     font-weight: 600;
     color: var(--texto-principal);
@@ -155,75 +130,36 @@ nav {
     color: var(--texto-principal);
     text-align: center;
   }
-  #mockup-image1 {
-    animation: shakeY; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  #mockup-hero-desk{
+    display: none;
+  }
+  #mockup-hero-mobile {
+    display: block;
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    overflow: hidden;
+  }
+  #mockup-hero-mobile > img {
+    height: 100%;
+    width: 100%;
     position: absolute;
-    right: -200px;
-    bottom: -10%;
-    height: 50%;
-    z-index: -2;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
   }
-  #mockup-image2 {
-    animation: shakeY; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 24s;
-    animation-iteration-count: infinite;
-    position: absolute;
-    right: 30%;
-    bottom: 35%;
-    height: 40%;
-    z-index: -2;
-  }
-  #mockup-image3 {
-    animation: shakeY; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 28s;
-    animation-iteration-count: infinite;
-    position: absolute;
-    right: -30%;
-    bottom: 70%;
-    height: 40%;
-    z-index: -2;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 768px) {
-    #mockup-image1 {
-    right: -30%;
-    bottom: -15%;
-    height: 55%;
-  }
-  #mockup-image2 {
-    right: 30%;
-    bottom: 15%;
-    height: 70%;
-  }
-  #mockup-image3 {
-    right: -50%;
-    bottom: 60%;
-    height: 70%;
-  }
-
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .hero-sect-text-container > h1 {
-    font-size: 2rem;
-  }
-  .hero-sect-text-container > h2 {
-    font-size: 1.3rem;
-  }
-  #mockup-image1 {
-    right: -30%;
-    bottom: -15%;
-    height: 55%;
-  }
-  #mockup-image2 {
-    right: 30%;
-    bottom: 15%;
-    height: 70%;
-  }
-  #mockup-image3 {
-    right: -50%;
-    bottom: 60%;
-    height: 70%;
+  #mockup-hero-mobile img.ativo-mobile {
+    animation: slideInRight;
+    animation-duration: 1s;
+    opacity: 1;
+    z-index: 1;
   }
 }

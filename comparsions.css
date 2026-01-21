@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url(variables.css);
-@import url(telasMenores.css);
 
 .comparisons-section {
   display: flex;
@@ -12,7 +11,13 @@
   gap: 2rem;
   background: #2a7b9b;
   background:
-  linear-gradient(180deg,#00a3c8 0%,rgba(87, 199, 133, 0) 50%,#00a3c8 100%), url("images/mesh-176.png");
+    linear-gradient(
+      180deg,
+      #00a3c8 0%,
+      rgba(87, 199, 133, 0) 50%,
+      #00a3c8 100%
+    ),
+    url("images/mesh-176.png");
   background-size: cover; /* Garante que a imagem preencha tudo */
   background-position: center; /* Mantém o centro da imagem sempre no meio */
 }
@@ -55,6 +60,10 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
+  transition: ease-in-out 0.5s;
+}
+.selected {
+  transform: scale(1.05);
 }
 .comparison-card > img {
   border-radius: 1rem 1rem 0 0;
