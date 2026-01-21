@@ -15,7 +15,7 @@
       rgba(87, 199, 133, 0) 50%,
       #00a3c8 100%
     ),
-    url("images/mesh-176.png");
+    url("images/mesh-27.png");
   background-size: cover; /* Garante que a imagem preencha tudo */
   background-position: center; /* Mantém o centro da imagem sempre no meio */
 }
@@ -30,9 +30,9 @@
 }
 .comparisons-section > h2 {
   font-family: "Inter", sans-serif;
-  font-weight: 100;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: var(--texto-principal);
   text-align: center;
 }
@@ -153,4 +153,8 @@
     font-size: 1.2rem;
     font-weight: 300;
   }
+}
+@media screen and (max-width: 768px) {
+
+
 }

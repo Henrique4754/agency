@@ -14,7 +14,7 @@
       rgba(87, 199, 133, 0) 50%,
       #00a3c8 100%
     ),
-    url(images/mesh-27.png);
+    url(images/mesh-176.png);
   background-size: cover; /* Garante que a imagem preencha tudo */
   background-position: center; /* Mantém o centro da imagem sempre no meio */
 }
@@ -72,7 +72,7 @@
   color: var(--texto-principal);
   background: rgba(255, 255, 255, 0.19);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 30px #60c0f3;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
@@ -99,4 +99,28 @@
   color: var(--texto-principal);
   background: #001959;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .pricing-cards-container {
+    width: 90%;
+    gap: 1rem;
+  }
+  
+  #basic-option > h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  #basic-option > h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  #best-option > h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  #best-option > h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
 }
