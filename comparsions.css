@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url(variables.css);
-
 .comparisons-section {
   display: flex;
   flex-direction: column;
@@ -32,7 +30,7 @@
 }
 .comparisons-section > h2 {
   font-family: "Inter", sans-serif;
-  font-weight: 700;
+  font-weight: 100;
   text-transform: uppercase;
   font-size: 2.5rem;
   color: var(--texto-principal);
