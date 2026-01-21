@@ -78,6 +78,9 @@
   box-shadow: 0 0px 30px #60c0f3;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
+  animation: shakeY;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
 }
 #best-option > h3 {
   font-size: 2rem;
