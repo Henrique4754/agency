@@ -19,15 +19,6 @@
   background-size: cover; /* Garante que a imagem preencha tudo */
   background-position: center; /* Mantém o centro da imagem sempre no meio */
 }
-#comparison-sect-bg {
-  position: absolute;
-  top: 100;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: -1;
-}
 .comparisons-section > h2 {
   font-family: "Inter", sans-serif;
   font-weight: 700;
@@ -61,8 +52,19 @@
 }
 .comparison-card > img {
   border-radius: 1rem 1rem 0 0;
-  margin-bottom: 2rem;
+  margin-bottom: -1rem;
   width: 100%;
+}
+.comparisons-section > a{
+  align-self: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: var(--texto-principal);
+  background: #001959;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 20px rgba(0, 209, 255, 0.3);
 }
 .slide-container-for-mobile {
   display: none;
@@ -133,7 +135,7 @@
     border-radius: 1rem;
     padding-bottom: 1rem;
     width: 300px;
-    height: 450px;
+    height: 400px;
     background: rgba(255, 255, 255, 0.19);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -142,19 +144,16 @@
   }
   .comparison-card > p {
     font-family: "Inter", sans-serif;
-    font-weight: 200;
+    font-weight: 500;
     padding: 0.5rem;
     font-size: 1rem;
     color: var(--texto-principal);
     text-align: center;
   }
   .comparison-card > h3 {
+    text-align: center;
     color: var(--texto-principal);
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 700;
   }
-}
-@media screen and (max-width: 768px) {
-
-
 }

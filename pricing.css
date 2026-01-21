@@ -10,11 +10,11 @@
   background:
     linear-gradient(
       180deg,
-      #00a3c8 0%,
+      #00a3c8 1%,
       rgba(87, 199, 133, 0) 50%,
       #00a3c8 100%
     ),
-    url(images/mesh-176.png);
+    url(images/mesh-807.png);
   background-size: cover; /* Garante que a imagem preencha tudo */
   background-position: center; /* Mantém o centro da imagem sempre no meio */
 }
@@ -123,4 +123,22 @@
     font-size: 1.5rem;
     font-weight: 400;
   }
+  #best-option > a {
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--texto-principal);
+  background: #001959;
+  border-radius: 10px;
+}
+#basic-option > a {
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--texto-principal);
+  background: #001959;
+  border-radius: 10px;
+}
 }
