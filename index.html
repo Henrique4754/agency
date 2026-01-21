@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="herosection.css" />
     <link rel="stylesheet" href="comparsions.css" />
+    <link rel="stylesheet" href="pricing.css" />
     <link rel="stylesheet" href="node_modules/animate.css/animate.css" />
     <link
       rel="stylesheet"
@@ -17,19 +18,22 @@
   <body>
     <nav>
       <div class="nav-logo">
-        <img
+        <a href="#start-ancor">
+
+          <img
           src="images/logo site fundo branco.jpg"
           alt="Logo Henrique Sites"
-        />
+          />
+        </a>
       </div>
       <ul class="nav-links">
         <li><a href="#comparisons-ancor">Problemas Comuns</a></li>
-        <li><a href="#pricing-section">Planos e Preços</a></li>
+        <li><a href="#pricing-ancor">Planos e Preços</a></li>
         <li><a href="#contact-section">Contato</a></li>
       </ul>
     </nav>
 
-    <section class="hero-section">
+    <section id="start-ancor" class="hero-section">
       <div class="content-container">
         <div id="mockup-hero-mobile">
           <img src="images/exemplo site mockup.png" alt="" />
@@ -46,7 +50,7 @@
             Sites lentos perdem vendas. Eu desenvolvo estruturas leves,
             otimizadas e focadas em conversão para o seu negócio.
           </h2>
-          <a href="#comparisons-ancor">Quero Meu Site Agora!</a>
+          <a href="#comparisons-ancor">Conhecer Melhor...</a>
         </div>
 
         <div id="mockup-hero-desk">
@@ -125,21 +129,35 @@
       </div>
     </section>
 
-    <section class="pricing-section">
+    <section id="pricing-ancor" class="pricing-section">
+      <h2>Planos e Preços_</h2>
       <div class="pricing-cards-container">
-        <div class="pricing-option">
-          <h3>Plano Normal</h3>
-          <p>R$ 1.500,00</p>
+        <div id="basic-option">
+          <h3>Plano Básico</h3>
+          <p>Ideal para quem está começando</p>
+          <ul>
+            <li>Design Responsivo</li>
+            <li>Até 5 Seções</li>
+            <li>Otimização de Velocidade</li>
+            <li>Formulário de Contato</li>
+          </ul>
+          <h4>R$ 499,00</h4>
+          <a href="#contact-section">Escolher Plano</a>
+        </div>
+        <div id="best-option">
+          <h3>Plano Profissional</h3>
+          <p>Perfeito para negócios em crescimento</p>
           <ul>
             <li>Design Personalizado</li>
-            <li>Otimização para Conversão</li>
-            <li>Suporte por 30 dias</li>
+            <li>Até 10 Seções</li>
+            <li>SEO Básico</li>
+            <li>Integração com Redes Sociais</li>
           </ul>
-          <a href="">Escolher Plano</a>
+          <h4>R$ 899,00</h4>
+          <a href="#contact-section">Escolher Plano</a>
         </div>
       </div>
     </section>
-
     <footer>
       <a
         href="https://www.flaticon.com/free-animated-icons/success"
