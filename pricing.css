@@ -19,6 +19,14 @@
   background-size: cover; /* Garante que a imagem preencha tudo */
   background-position: center; /* Mantém o centro da imagem sempre no meio */
 }
+.pricing-section > h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: var(--texto-principal);
+  text-align: center;
+}
 .pricing-cards-container {
   display: flex;
   flex-direction: row;
@@ -31,9 +39,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  padding: 1rem;
+  width: 250px;
+  height: 350px;
+  text-align: center;
+  color: var(--texto-principal);
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+#basic-option > h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+#basic-option > h4 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+#best-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 12px;
+  padding: 1rem;
   width: 300px;
   height: 400px;
   text-align: center;
@@ -44,37 +77,27 @@
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
 }
-#best-option {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  width: 350px;
-  height: 450px;
-  text-align: center;
-  color: var(--texto-principal);
-  background: rgba(255, 255, 255, 0.19);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+#best-option > h3 {
+  font-size: 2rem;
+  font-weight: 500;
 }
-
+#best-option > h4 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
 #best-option > a {
-  margin-top: 15rem;
   padding: 1rem;
+  width: 100%;
   text-decoration: none;
   color: var(--texto-principal);
   background: #001959;
-  border-radius: 999px;
+  border-radius: 10px;
 }
 #basic-option > a {
-  margin-top: 12rem;
   padding: 1rem;
+  width: 100%;
   text-decoration: none;
   color: var(--texto-principal);
   background: #001959;
-  border-radius: 999px;
+  border-radius: 10px;
 }
