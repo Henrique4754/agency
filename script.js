@@ -67,3 +67,9 @@ setInterval(() => {
   indiceAtualMobile = (indiceAtualMobile + 1) % imagensMobile.length;
   mostrarImagemMobile(indiceAtualMobile);
 }, 2500);
+
+
+function showNav(){
+  const navBar = document.querySelector('.nav-links-mobile')
+  
+}
