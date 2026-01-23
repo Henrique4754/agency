@@ -85,7 +85,7 @@
     pointer-events: all;
   }
   .nav-list a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     opacity: 0;
   }
   .nav-list li:nth-child(1) a {
