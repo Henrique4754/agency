@@ -51,6 +51,7 @@ setInterval(() => {
   mostrarImagem(indiceAtual);
 }, 2500);
 
+// --------------------------------------------------------------------------
 const mockupDivMobile = document.getElementById("mockup-hero-mobile");
 const imagensMobile = mockupDivMobile.querySelectorAll("img");
 
@@ -67,9 +68,28 @@ setInterval(() => {
   indiceAtualMobile = (indiceAtualMobile + 1) % imagensMobile.length;
   mostrarImagemMobile(indiceAtualMobile);
 }, 2500);
+// --------------------------------------------------------------------------
 
+const imagesContainer = document.getElementById("image-card-container");
+const imagesCards = imagesContainer.querySelectorAll("div");
 
-function showNav(){
-  const navBar = document.querySelector('.nav-links-mobile')
-  
+let indiceAtualComparison = 0;
+
+function mostrarImagemComparison(index) {
+  imagesCards.forEach((div, i) => {
+    div.classList.toggle("on", i === index);
+  });
 }
+mostrarImagemComparison(indiceAtualComparison);
+
+setInterval(() => {
+  indiceAtualComparison = (indiceAtualComparison + 1) % imagesCards.length;
+  mostrarImagemComparison(indiceAtualComparison);
+}, 3000);
+
+function showNav() {
+  const navBar = document.querySelector(".nav-links-mobile");
+  navBar.classList.remove=".nav-links-mobile"
+}
+
+showNav()
