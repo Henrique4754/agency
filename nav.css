@@ -1,0 +1,85 @@
+@import url(variables.css);
+.header {
+  padding-inline: 16px;
+
+    background: rgba(255, 255, 255, 0.17);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  
+  width: 100%;
+}
+.nav > a {
+  text-decoration: none;
+}
+.nav {
+  max-width: 1280px;
+  height: 70px;
+  display: flex;
+  margin-inline: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo > img{
+    height: 48px;
+    border-radius: 10px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.nav-list a {
+  font-size: 1rem;
+  color: #fff;
+  padding-block: 16px;
+  text-decoration: none;
+}
+
+.nav-list  li{
+  font-size: 1rem;
+  color: #fff;
+  padding-block: 16px;
+}
+
+.hamb {
+  display: none;
+  border: none;
+  background: none;
+  border-top: 2px solid var(--texto-principal);
+  cursor: pointer;
+  z-index: 3;
+}
+.hamb::before,
+.hamb::after {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: var(--texto-principal);
+  margin-top: 5px;
+}
+@media (max-width: 750px) {
+  .hamb {
+    display: block;
+  }
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 20vh;
+    background: #2e2e2e;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    clip-path: circle(100px at 150% -15%);
+    transition: 1s ease-out;
+    pointer-events: none;
+  }
+  .nav.active .nav-list {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+}

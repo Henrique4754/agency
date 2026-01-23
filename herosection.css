@@ -1,20 +1,5 @@
 @import url(variables.css);
 @import url(node_modules/animate.css/animate.css);
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.17);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.57);
-  backdrop-filter: blur(3.7px);
-  -webkit-backdrop-filter: blur(3.7px);
-  gap: 2rem;
-}
 .hero-section {
   display: flex;
   flex-direction: row;
@@ -28,6 +13,7 @@ nav {
     url("images/mesh-757.png");
   background-size: cover; /* Garante que a imagem preencha tudo */
   background-position: center; /* Mantém o centro da imagem sempre no meio */
+  z-index: -1;
 }
 .content-container {
   display: flex;

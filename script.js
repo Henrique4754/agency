@@ -87,9 +87,7 @@ setInterval(() => {
   mostrarImagemComparison(indiceAtualComparison);
 }, 3000);
 
-function showNav() {
-  const navBar = document.querySelector(".nav-links-mobile");
-  navBar.classList.remove=".nav-links-mobile"
-}
+const hamb = document.querySelector(".hamb");
+const nav = document.querySelector(".nav");
 
-showNav()
+hamb.addEventListener("click", () => nav.classList.toggle("active"));
