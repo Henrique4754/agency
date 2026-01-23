@@ -46,7 +46,7 @@
   display: none;
   border: none;
   background: none;
-  border-top: 2px solid var(--texto-principal);
+  border-top: 3px solid var(--texto-principal);
   cursor: pointer;
   z-index: 3;
 }
